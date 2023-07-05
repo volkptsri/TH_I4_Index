@@ -1,0 +1,17 @@
+{
+    "question": "What are the processes in your production line?",
+    "guideline": "Please list out all processes in your production line.",
+    "name": "processes",
+    "sub-name": "process_name",
+    "pre-filled-text": [
+      {
+        "process_name": "Production Step 1"
+      },
+      {
+        "process_name": "Production Step 2"
+      },
+      {
+        "process_name": "Production Step 3"
+      }
+    ]
+  }

@@ -3,105 +3,33 @@ async function submit() {
   await new Promise(r => setTimeout(r, 1000))
   alert('Submitted! 🎉')
 }
+
 </script>
 
 <template>
   <div class="your-first-form">
-    <img
-      src="https://www.thindex.or.th/Content/assets/img/logo_big.png"
-      alt="THi4Index Logo"
-      width="244"
-      height="50"
-      class="logo"
-    >
-    <FormKit
-    #default="{ value }"
-    type="form"
-    @submit="submitTeamMembers"
-    id="teamMemberForm"
-    submit-label="Submit to see the errors"
-    help="hello"
-  >
-    <FormKit
-      id="repeater"
-      name="processes"
-      type="repeater"
-      label="Processes"
-      add-label="Add Another Process"
-      :value="[
-        { process_name: 'Production Step 1'  },
+    <img src="https://www.thindex.or.th/Content/assets/img/logo_big.png" alt="THi4Index Logo" width="244" height="50"
+      class="logo">
+    <h2>Question 1: What is the question?</h2>
+    <h3>Guideline: Tell me more...</h3>
+    <FormKit #default="{ value }" type="form" @submit="submit" id="processForm" submit-label="Submit to see the errors"
+      help="hello">
+      <FormKit id="repeater" name="processes" type="repeater" label="Processes" add-label="Add Another Process" :value="[
+        { process_name: 'Production Step 1' },
         { process_name: 'Production Step 2' },
-      ]"
-    >
-      <FormKit
-        type="text"
-        label="Process"
-        name="process_name"
-        validation="required"
-        placeholder="Add another process..."
-   />
-    </FormKit>
-    <pre wrap>{{ value }}</pre>
-  </FormKit>
-    <FormKit
-      type="form"
-      #default="{ value }"
-      @submit="submit">
-    
-    </FormKit>
-    <!-- <FormKit
-      type="form"
-      #default="{ value }"
-      @submit="submit"
-    >
-      <FormKit
-        type="text"
-        name="name"
-        label="Name"
-        help="What do people call you?"
-      />
-      <FormKit
-        type="checkbox"
-        name="flavors"
-        label="Favorite ice cream flavors"
-        :options="{
-          'vanilla': 'Vanilla',
-          'chocolate': 'Chocolate',
-          'strawberry': 'Strawberry',
-          'mint-chocolate-chip': 'Mint Chocolate Chip',
-          'rocky-road': 'Rocky Road',
-          'cookie-dough': 'Cookie Dough',
-          'pistachio': 'Pistachio',
-        }"
-        validation="required|min:2"
-      />
-      
-      <FormKit
-        type="repeater"
-        name="invitees"
-        label="Invitees"
-        help="Who else should we invite to FormKit?"
-      >
-        <FormKit
-          type="text"
-          name="email"
-          label="Email"
-          validation="required|email"
-        />
+        { process_name: 'Production Step 3' }
+      ]">
+        <FormKit type="text" label="Process" name="process_name" validation="required"
+          placeholder="Add another process..." />
       </FormKit>
-      <FormKit
-        type="checkbox"
-        name="agree"
-        label="I agree FormKit is the best form authoring framework."
-      />
-      <pre>{{ value }}</pre>
-    </FormKit> -->
+      <pre wrap>{{ value }}</pre>
+    </FormKit>
   </div>
 </template>
 
 <style scoped>
 .your-first-form {
-  width: calc(100% - 2em);
+  width: calc(100% - 1em);
   max-width: 480px;
   box-sizing: border-box;
   padding: 2em;
@@ -116,6 +44,7 @@ async function submit() {
   display: block;
   margin: 0 auto 2em auto;
 }
+
 pre {
   background-color: rgba(0, 100, 250, .1);
   padding: 1em;
