@@ -17,11 +17,26 @@ async function submit() {
       class="logo">
     <h2>Question 1: What is the question?</h2>
     <h3>Guideline: Tell me more...</h3>
-    <FormKit #default="{ value }" type="form" @submit="submit" id="processForm" submit-label="Submit to see the errors"
-      help="hello">
-      <FormKit id="repeater" name="processes" type="repeater" label="Processes" add-label="Add Another Process" :value= preFilledText >
-        <FormKit type="text" label="Process" name="process_name" validation="required"
-          placeholder="Add another process..." />
+    <FormKit 
+    #default="{ value }" 
+    type="form" 
+    @submit="submit" 
+    id="processForm" 
+    submit-label="Submit to see the errors"
+    help="hello">
+      <FormKit 
+      id="repeater" 
+      name="processes" 
+      type="repeater" 
+      label="Processes" 
+      add-label="Add Another Process" 
+      :value= preFilledText >
+        <FormKit 
+        type="text" 
+        label="Process" 
+        name="process_name" 
+        validation="required"
+        placeholder="Add another process..." />
       </FormKit>
       <pre wrap>value == {{ value }} </pre>
       <pre wrap>preFilledText == {{ preFilledText }} </pre>
