@@ -3,7 +3,7 @@
     "guideline": "Please list out all processes in your production line.",
     "name": "processes",
     "sub-name": "process_name",
-    "pre-filled-text": [
+    "preFilledText": [
       {
         "process_name": "Production Step 1"
       },
@@ -12,6 +12,13 @@
       },
       {
         "process_name": "Production Step 3"
+      },
+      {
+        "process_name": "Production Step OK"
+      },
+      {
+        "process_name": "Production Step OK Mak"
       }
+
     ]
   }

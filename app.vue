@@ -1,4 +1,9 @@
 <script setup>
+//read JSON file from local thi4form.json
+import thi4form from './thi4form.json';
+// read value from thi4form
+const preFilledText = thi4form['preFilledText'];
+
 async function submit() {
   await new Promise(r => setTimeout(r, 1000))
   alert('Submitted! 🎉')
@@ -14,15 +19,12 @@ async function submit() {
     <h3>Guideline: Tell me more...</h3>
     <FormKit #default="{ value }" type="form" @submit="submit" id="processForm" submit-label="Submit to see the errors"
       help="hello">
-      <FormKit id="repeater" name="processes" type="repeater" label="Processes" add-label="Add Another Process" :value="[
-        { process_name: 'Production Step 1' },
-        { process_name: 'Production Step 2' },
-        { process_name: 'Production Step 3' }
-      ]">
+      <FormKit id="repeater" name="processes" type="repeater" label="Processes" add-label="Add Another Process" :value= preFilledText >
         <FormKit type="text" label="Process" name="process_name" validation="required"
           placeholder="Add another process..." />
       </FormKit>
-      <pre wrap>{{ value }}</pre>
+      <pre wrap>value == {{ value }} </pre>
+      <pre wrap>preFilledText == {{ preFilledText }} </pre>
     </FormKit>
   </div>
 </template>
