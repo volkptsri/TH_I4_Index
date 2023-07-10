@@ -3,7 +3,8 @@
 import thi4form from './thi4form.json';
 // read value from thi4form
 const preFilledText = thi4form['preFilledText'];
-
+const question = thi4form['question'];
+const guideline = thi4form['guideline'];
 async function submit() {
   await new Promise(r => setTimeout(r, 1000))
   alert('Submitted! 🎉')
@@ -15,8 +16,8 @@ async function submit() {
   <div class="your-first-form">
     <img src="https://www.thindex.or.th/Content/assets/img/logo_big.png" alt="THi4Index Logo" width="244" height="50"
       class="logo">
-    <h2>Question 1: What is the question?</h2>
-    <h3>Guideline: Tell me more...</h3>
+    <h2>{{question}}</h2>
+    <h3>{{guideline}}</h3>
     <FormKit 
     #default="{ value }" 
     type="form" 
