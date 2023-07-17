@@ -16,6 +16,7 @@
   "dependencies": {
     "@formkit/nuxt": "latest",
     "@formkit/icons": "latest",
-    "@formkit/pro": "latest"
+    "@formkit/pro": "latest",
+    "@superbase/realtime-postgres": "latest"
   }
 }

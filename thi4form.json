@@ -1,24 +1,23 @@
 {
-    "question": "What are the processes in your production line?",
-    "guideline": "Guideline: Please list out all processes in your production line.",
-    "name": "processes",
-    "sub-name": "process_name",
-    "preFilledText": [
-      {
-        "process_name": "Step 1"
-      },
-      {
-        "process_name": "Step 2"
-      },
-      {
-        "process_name": "Step 3"
-      },
-      {
-        "process_name": "Step 4"
-      },
-      {
-        "process_name": "Step 5"
-      }
-
-    ]
-  }
+  "question": "คำถามภาษาไทย",
+  "guideline": "คำแนะภาษาไทย",
+  "name": "new processes",
+  "sub-name": "process_name",
+  "preFilledText": [
+    {
+      "process_name": "Step 1"
+    },
+    {
+      "process_name": "Step 2"
+    },
+    {
+      "process_name": "Step 3"
+    },
+    {
+      "process_name": "Step 4"
+    },
+    {
+      "process_name": "Step 5"
+    }
+  ]
+}

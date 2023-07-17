@@ -40,7 +40,7 @@ async function submit() {
         placeholder="Add another process..." />
       </FormKit>
       <pre wrap>value == {{ value }} </pre>
-      <pre wrap>preFilledText == {{ preFilledText }} </pre>
+      <pre wrap>thi4form == {{thi4form}} </pre>
     </FormKit>
   </div>
 </template>
