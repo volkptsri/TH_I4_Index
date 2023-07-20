@@ -56,7 +56,7 @@ const thischema = [
     },
   },
   {
-    $formkit: "select",
+    $formkit: "radio",
     if: "$get(thi4_index).value", // conditional Logic!
     name: "client_notice",
     label: "เรากำลังคิดว่า...",
